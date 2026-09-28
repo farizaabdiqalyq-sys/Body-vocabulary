@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Parts & Health Interactive Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 35px;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        select, input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+        button {
+            display: block;
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 6px;
+            display: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .feedback {
+            font-size: 14px;
+            color: #e74c3c;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Body Vocabulary & Grammar Quiz</h1>
+
+    <!-- Section 1: Matching Word Meanings -->
+    <div class="section">
+        <h2>Part 1: Find the Word Meaning</h2>
+        
+        <div class="question">
+            <label for="m1">1. The part of the body between the head and the shoulders:</label>
+            <select id="m1">
+                <option value="">-- Choose a word --</option>
+                <option value="neck">Neck</option>
+                <option value="throat">Throat</option>
+                <option value="ankle">Ankle</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="m2">2. Pain located inside or around a tooth:</label>
+            <select id="m2">
+                <option value="">-- Choose a word --</option>
+                <option value="headache">Headache</option>
+                <option value="toothache">Toothache</option>
+                <option value="earache">Ear ache</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="m3">3. The joint connecting the foot to the leg:</label>
+            <select id="m3">
+                <option value="">-- Choose a word --</option>
+                <option value="knee">Knee</option>
+                <option value="elbow">Elbow</option>
+                <option value="ankle">Ankle</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="m4">4. Pain inside the stomach area:</label>
+            <select id="m4">
+                <option value="">-- Choose a word --</option>
+                <option value="stomach ache">Stomach ache</option>
+                <option value="headache">Headache</option>
+                <option value="muscle">Muscle</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Section 2: Complete the Sentence -->
+    <div class="section">
+        <h2>Part 2: Complete the Sentence ("When" / "If" & Body Vocabulary)</h2>
+
+        <div class="question">
+            <label for="s1">1. ____ I have a bad __________, I will take some medicine and rest my head.</label>
+            <select id="s1_cond">
+                <option value="">-- Select --</option>
+                <option value="If">If</option>
+                <option value="When">When</option>
+            </select>
+            <select id="s1_word" style="margin-top: 6px;">
+                <option value="">-- Select word --</option>
+                <option value="headache">headache</option>
+                <option value="tongue">tongue</option>
+                <option value="shoulder">shoulder</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="s2">2. __________ we finish our workout, my leg __________s will be sore.</label>
+            <select id="s2_cond">
+                <option value="">-- Select --</option>
+                <option value="When">When</option>
+                <option value="If">If</option>
+            </select>
+            <select id="s2_word" style="margin-top: 6px;">
+                <option value="">-- Select word --</option>
+                <option value="muscle">muscle</option>
+                <option value="lip">lip</option>
+                <option value="ear">ear</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="s3">3. ____ you eat too fast, you might get a ____________.</label>
+            <select id="s3_cond">
+                <option value="">-- Select --</option>
+                <option value="If">If</option>
+                <option value="When">When</option>
+            </select>
+            <select id="s3_word" style="margin-top: 6px;">
+                <option value="">-- Select word --</option>
+                <option value="stomach ache">stomach ache</option>
+                <option value="finger">finger</option>
+                <option value="elbow">elbow</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Section 3: Freer Practice -->
+    <div class="section">
+        <h2>Part 3: Freer Practice (Creative Sentences)</h2>
+        <p>Write your own conditional sentences using <strong>when</strong> or <strong>if</strong> with body parts or health aches from the vocabulary list.</p>
+
+        <div class="question">
+            <label for="free1">Sentence 1 (Using <em>if</em> + a body part or ache):</label>
+            <textarea id="free1" placeholder="e.g., If I hurt my ankle, I will not play football today."></textarea>
+        </div>
+
+        <div class="question">
+            <label for="free2">Sentence 2 (Using <em>when</em> + a body part or ache):</label>
+            <textarea id="free2" placeholder="e.g., When I have an ear ache, I go to see the doctor."></textarea>
+        </div>
+    </div>
+
+    <button onclick="checkAnswers()">Submit Quiz</button>
+
+    <div id="result" class="result"></div>
+</div>
+
+<script>
+function checkAnswers() {
+    let score = 0;
+    let total = 7; // 4 vocabulary matching + 3 sentence completion
+
+    // Part 1 Answers
+    const m1 = document.getElementById('m1').value;
+    const m2 = document.getElementById('m2').value;
+    const m3 = document.getElementById('m3').value;
+    const m4 = document.getElementById('m4').value;
+
+    if (m1 === 'neck') score++;
+    if (m2 === 'toothache') score++;
+    if (m3 === 'ankle') score++;
+    if (m4 === 'stomach ache') score++;
+
+    // Part 2 Answers
+    const s1_cond = document.getElementById('s1_cond').value;
+    const s1_word = document.getElementById('s1_word').value;
+    const s2_cond = document.getElementById('s2_cond').value;
+    const s2_word = document.getElementById('s2_word').value;
+    const s3_cond = document.getElementById('s3_cond').value;
+    const s3_word = document.getElementById('s3_word').value;
+
+    if (s1_cond === 'If' && s1_word === 'headache') score++;
+    if (s2_cond === 'When' && s2_word === 'muscle') score++;
+    if (s3_cond === 'If' && s3_word === 'stomach ache') score++;
+
+    // Check Freer Practice Completion
+    const free1 = document.getElementById('free1').value.trim();
+    const free2 = document.getElementById('free2').value.trim();
+
+    const resultDiv = document.getElementById('result');
+    resultDiv.style.display = 'block';
+    resultDiv.className = 'result success';
+
+    let message = `You scored ${score} out of ${total} on the objective questions!<br><br>`;
+
+    if (free1.length > 5 && free2.length > 5) {
+        message += "<strong>Freer Practice Submitted:</strong> Great job creating your own sentences! Show them to your teacher for feedback.";
+    } else {
+        message += "<strong>Note:</strong> Don't forget to complete both sentences in Part 3 for freer practice!";
+    }
+
+    resultDiv.innerHTML = message;
+}
+</script>
+
+</body>
+</html>
